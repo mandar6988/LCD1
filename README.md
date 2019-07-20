@@ -14,3 +14,6 @@ LCD_DATA is used to send data to LCD
 
 
 LCD_INIT function is used to initialise LCD in 8 bit mode and some initial setting
+
+
+main1.c file contains code to interface LCD to LPC2148 in 4 bit mode.
