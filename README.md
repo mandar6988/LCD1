@@ -17,3 +17,4 @@ LCD_INIT function is used to initialise LCD in 8 bit mode and some initial setti
 
 
 main1.c file contains code to interface LCD to LPC2148 in 4 bit mode.
+LCD.H file must be needed to run this code. It is header file which contains functions to run code.
