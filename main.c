@@ -1,8 +1,7 @@
 #include"lpc21xx.h"
-#include<stdio.h>
-# define RS (1<<12);
-# define RW (1<<13) ;
-# define EN (1<<14)	;
+# define RS (1<<12);// RS pin pf LCD is connected to Port_pin 0.12
+# define RW (1<<13) ; // RW  pin pf LCD is connected to Port_pin 0.13
+# define EN (1<<14)	;//EN  pin pf LCD is connected to Port_pin 0.14
 # define data_pins (0xFF<<0) 
 
 void delay(unsigned int count)
@@ -18,12 +17,12 @@ unsigned int i,j;
 				}
 		}
  }
-
+ 
 void LCD_DATA(unsigned char data)
 {
 unsigned int temp;
 temp=data;
- IOSET0=(temp<<4);
+ IOSET0=(temp<<4); // Data pins of lcd is connected to poer pin 0.4 onwards 
  IOSET0=RS;
  IOCLR0=RW;
  IOSET0=EN;
